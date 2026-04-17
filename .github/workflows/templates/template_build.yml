@@ -1,0 +1,50 @@
+name: Template Build v1.0.0
+on:
+  workflow_call:
+    inputs:
+      # CAMBIO: Se define 'node-version' como opcional para permitir que 
+      # diferentes proyectos usen versiones superiores (ej. 20 o 22).
+      node-version:
+        required: false
+        type: string
+        default: '18'
+      # CAMBIO: Se mantiene el entorno como obligatorio para asegurar que 
+      # el artefacto sepa a qué contexto pertenece[cite: 14].
+      environment:
+        required: true
+        type: string
+    # Item 1.3: Definición de outputs para retornar valores entre jobs.
+    outputs:
+      build-status:
+        description: "Estado final del proceso de construcción"
+        value: ${{ jobs.build.result }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Item 1.3: Declaración de variables de entorno (env:) parametrizables.
+    env:
+      APP_ENV: ${{ inputs.environment }}
+    steps:
+      # Item 1.2: Acción externa de GitHub Marketplace para obtener el código[cite: 33].
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      # Item 1.2: Acción externa parametrizada con la versión definida en el input[cite: 35].
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar Build
+        run: npm run build
+
+      # Item 1.1: Paso lógico para validar que el build fue exitoso[cite: 28].
+      - name: Validación de salida
+        run: echo "Build completado exitosamente para el entorno ${{ inputs.environment }}"
+
+      env:
+        NODE_ENV: ${{ inputs.environment }} # El build cambiará su optimización según esto

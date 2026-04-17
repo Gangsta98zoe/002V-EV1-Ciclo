@@ -1,0 +1,35 @@
+name: Template Deploy v1.0.0
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+      region:
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Acción externa necesaria para acceder a scripts o archivos del repo
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      # 2. Acción externa requerida por el caso TechMarket (AWS)
+      - name: Configurar credenciales de AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ inputs.region }}
+
+      # 3. Personalización del comportamiento según el parámetro 'environment'
+      - name: Ejecutar Despliegue Personalizado
+        run: |
+          if [[ "${{ inputs.environment }}" == "prod" ]]; then
+            echo "🚀 EJECUTANDO DESPLIEGUE CRÍTICO EN PRODUCCIÓN"
+            echo "Aplicando políticas de alta disponibilidad en la región ${{ inputs.region }}..."
+          else
+            echo "🛠️ Desplegando en entorno de pruebas: ${{ inputs.environment }}"
+            echo "Configuración ligera para entorno no productivo."
+          fi

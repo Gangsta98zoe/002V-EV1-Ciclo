@@ -1,0 +1,25 @@
+name: Template Test v1.0.0
+on:
+  workflow_call:
+    inputs:
+      test-command:
+        required: true
+        default: 'npm test'
+      node-version: # Nuevo input para flexibilidad
+        required: false
+        type: string
+        default: '18' # Mantiene la compatibilidad base
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }} # Ahora es dinámico
+      - run: npm install
+      - run: ${{ inputs.test-command }}
+
+      ### Se agrega un nuevo input llamado node-version en la sección inputs.
+      ### Esto permitirá que quien llame a la plantilla decida qué versión usar,
+      ### manteniendo la 18 como valor por defecto para cumplir con el estándar inicial.

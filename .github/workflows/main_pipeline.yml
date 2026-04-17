@@ -1,0 +1,29 @@
+name: Pipeline Principal TechMarket
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    ### CAMBIO: Usamos la ruta estándar definida en el encargo 
+    uses: ./.github/workflows/templates/template_build.yml
+    with:
+      environment: dev
+      node-version: '18'
+
+  test:
+    needs: build
+    uses: ./.github/workflows/templates/template_test.yml
+    with:
+      ### CAMBIO: Ahora pasamos la versión de Node y el comando [cite: 45, 46]
+      ### Esto demuestra que la plantilla es reutilizable y configurable.
+      node-version: '18'
+      test-command: 'npm run test'
+
+  deploy:
+    needs: test
+    uses: ./.github/workflows/templates/template_deploy.yml
+    with:
+      ### CAMBIO: Mantenemos la consistencia de despliegue en producción 
+      environment: prod
+      region: us-east-1
