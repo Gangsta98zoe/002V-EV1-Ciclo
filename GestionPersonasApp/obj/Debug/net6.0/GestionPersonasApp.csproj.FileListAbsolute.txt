@@ -1,0 +1,15 @@
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\obj\Debug\net6.0\GestionPersonasApp.csproj.AssemblyReference.cache
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\obj\Debug\net6.0\GestionPersonasApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\obj\Debug\net6.0\GestionPersonasApp.AssemblyInfoInputs.cache
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\obj\Debug\net6.0\GestionPersonasApp.AssemblyInfo.cs
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\obj\Debug\net6.0\GestionPersonasApp.csproj.CoreCompileInputs.cache
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\bin\Debug\net6.0\GestionPersonasApp.exe
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\bin\Debug\net6.0\GestionPersonasApp.deps.json
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\bin\Debug\net6.0\GestionPersonasApp.runtimeconfig.json
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\bin\Debug\net6.0\GestionPersonasApp.dll
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\bin\Debug\net6.0\GestionPersonasApp.pdb
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\obj\Debug\net6.0\GestionPersonasApp.dll
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\obj\Debug\net6.0\refint\GestionPersonasApp.dll
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\obj\Debug\net6.0\GestionPersonasApp.pdb
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\obj\Debug\net6.0\GestionPersonasApp.genruntimeconfig.cache
+C:\Users\Edison\002V-EV1-Ciclo\GestionPersonasApp\obj\Debug\net6.0\ref\GestionPersonasApp.dll
