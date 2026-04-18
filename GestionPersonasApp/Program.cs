@@ -42,3 +42,4 @@ while (!salir)
             break;
     }
 }
+#Se comenta codigo a modo de prueba
