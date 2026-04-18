@@ -11,3 +11,4 @@ public class Persona
         Console.WriteLine($"Nombre: {Nombre}, Edad: {Edad}, RUT: {Rut}");
     }
 }
+# tabla prueba
