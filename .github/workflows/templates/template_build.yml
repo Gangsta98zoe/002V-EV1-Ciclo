@@ -48,3 +48,6 @@ jobs:
 
       env:
         NODE_ENV: ${{ inputs.environment }} # El build cambiará su optimización según esto
+#Template Versión v1.0.0.0
+#última actualización 23/04/2025
+

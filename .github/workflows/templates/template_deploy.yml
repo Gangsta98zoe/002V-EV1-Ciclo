@@ -33,3 +33,6 @@ jobs:
             echo "🛠️ Desplegando en entorno de pruebas: ${{ inputs.environment }}"
             echo "Configuración ligera para entorno no productivo."
           fi
+
+          #Template Versión v1.0.0.0
+          #última actualización 23/04/2025
