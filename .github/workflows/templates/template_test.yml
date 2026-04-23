@@ -23,3 +23,4 @@ jobs:
       ### Se agrega un nuevo input llamado node-version en la sección inputs.
       ### Esto permitirá que quien llame a la plantilla decida qué versión usar,
       ### manteniendo la 18 como valor por defecto para cumplir con el estándar inicial.
+      #version: 1.0.0

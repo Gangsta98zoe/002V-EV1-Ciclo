@@ -48,3 +48,4 @@ jobs:
 
       env:
         NODE_ENV: ${{ inputs.environment }} # El build cambiará su optimización según esto
+#version: 1.0.0

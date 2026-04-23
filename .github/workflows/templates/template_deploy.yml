@@ -33,3 +33,4 @@ jobs:
             echo "🛠️ Desplegando en entorno de pruebas: ${{ inputs.environment }}"
             echo "Configuración ligera para entorno no productivo."
           fi
+#version: 1.0.0
