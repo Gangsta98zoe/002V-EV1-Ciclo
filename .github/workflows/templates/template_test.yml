@@ -19,8 +19,18 @@ jobs:
           node-version: ${{ inputs.node-version }} # Ahora es dinámico
       - run: npm install
       - run: ${{ inputs.test-command }}
+      - uses: dorny/test-reporter@v1
+       with:
+         name: 'Test Report'
+         path: 'test-results.xml'
+         reporter: 'jest-junit'
 
       ### Se agrega un nuevo input llamado node-version en la sección inputs.
       ### Esto permitirá que quien llame a la plantilla decida qué versión usar,
       ### manteniendo la 18 como valor por defecto para cumplir con el estándar inicial.
+ main
+## Template Version: v1.0.0
+## Last Updated: 2025-04-19
+=======
       #version: 1.0.0
+ dev
